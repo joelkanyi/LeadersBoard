@@ -8,7 +8,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.GADsLeaderboard">
+        android:theme="@style/MyMaterialTheme">
+        <activity
+            android:name=".LeaderboardActivity"
+            android:label="@string/title_activity_leaderboard"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
