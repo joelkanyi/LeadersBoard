@@ -11,7 +11,11 @@ class SkillIQLeaders : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_skill_i_q_leaders, container, false)
+        val view : View =  inflater.inflate(R.layout.fragment_skill_i_q_leaders, container, false)
+        //My code here
+
+
+        return view
     }
 
 }
