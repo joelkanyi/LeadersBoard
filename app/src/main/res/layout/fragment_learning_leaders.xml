@@ -5,12 +5,17 @@
     android:layout_height="match_parent"
     tools:context=".LearningLeaders">
 
-    <!-- TODO: Update blank fragment layout -->
-
-
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Learning Leaders" />
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/learning_leaders_recycler"
+            tools:listitem="@layout/learning_recyclerview_row"/>
+
+    </LinearLayout>
 
 </FrameLayout>
