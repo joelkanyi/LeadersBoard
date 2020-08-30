@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:elevation="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/skill_iq_leader_badge"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/skill_iq"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/skill_iq_leader_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/skill_iq_leader_badge"
+            android:textStyle="bold"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:text="John Doe"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/skill_iq_leader_name"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/skill_iq_leader_badge"
+            android:text="300 Skill IQ Score, Kenya" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
