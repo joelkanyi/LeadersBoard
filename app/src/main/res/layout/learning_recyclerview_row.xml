@@ -22,6 +22,7 @@
             android:layout_toRightOf="@id/top_learner_badge"
             android:textStyle="bold"
             android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
             android:text="John Doe"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -30,6 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/top_learner_name"
             android:layout_marginTop="5dp"
+            android:layout_marginLeft="16dp"
             android:layout_toRightOf="@+id/top_learner_badge"
             android:text="223 learning hours, Kenya" />
 
