@@ -1,4 +1,4 @@
-package com.kanyideveloper.gadsleaderboard
+package com.kanyideveloper.gadsleaderboard.adapters
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager

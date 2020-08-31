@@ -1,7 +1,8 @@
-package com.kanyideveloper.gadsleaderboard
+package com.kanyideveloper.gadsleaderboard.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.kanyideveloper.gadsleaderboard.R
 
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -1,10 +1,12 @@
-package com.kanyideveloper.gadsleaderboard
+package com.kanyideveloper.gadsleaderboard.ui.main
 
 import android.os.Bundle
 import com.google.android.material.tabs.TabLayout
 import androidx.viewpager.widget.ViewPager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import com.kanyideveloper.gadsleaderboard.R
+import com.kanyideveloper.gadsleaderboard.adapters.ViewPagerAdapter
 
 
 class LeaderboardActivity : AppCompatActivity() {
