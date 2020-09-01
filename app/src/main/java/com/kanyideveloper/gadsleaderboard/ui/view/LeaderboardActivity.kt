@@ -1,4 +1,4 @@
-package com.kanyideveloper.gadsleaderboard.ui.main
+package com.kanyideveloper.gadsleaderboard.ui.view
 
 import android.os.Bundle
 import com.google.android.material.tabs.TabLayout

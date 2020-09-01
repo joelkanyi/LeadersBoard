@@ -1,4 +1,4 @@
-package com.kanyideveloper.gadsleaderboard.ui.main
+package com.kanyideveloper.gadsleaderboard.ui.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
