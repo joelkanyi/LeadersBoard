@@ -32,7 +32,7 @@ class LearningRepository (val application: Application) {
         //Network call
         val retrofit = Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(GsonConverterFactory.create()).build()
         val service = retrofit.create(RestAPI::class.java)
-        service.getLearner().enqueue(object : Callback<List<Learner>> {
+        service.getTopLearner().enqueue(object : Callback<List<Learner>> {
             override fun onResponse(call: Call<List<Learner>>, response: Response<List<Learner>>) {
                 showProgress.value = false
                 Log.d(TAG, "onResponse: ${Gson().toJson(response.body())}")
