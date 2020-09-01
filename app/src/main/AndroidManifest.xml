@@ -10,9 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/MyMaterialTheme">
         <activity
-            android:name=".ui.view.SplashActivity"
-            android:label="@string/title_activity_leaderboard"></activity>
-        <activity android:name=".ui.view.LeaderboardActivity">
+            android:name=".ui.view.LeaderboardActivity"/>
+        <activity android:name=".ui.view.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
