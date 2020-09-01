@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.view.SkillIQLeaders">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -16,6 +16,12 @@
             android:id="@+id/skill_iq_leaders_recycler"
             tools:listitem="@layout/skill_iq_recyclerview_row"/>
 
-    </LinearLayout>
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/skills_progress_bar"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
 
 </FrameLayout>
