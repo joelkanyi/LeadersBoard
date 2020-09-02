@@ -13,7 +13,7 @@ import kotlinx.android.synthetic.main.learning_recyclerview_row.view.*
 class LearningAdapter( private val context: Context) : RecyclerView.Adapter<LearningAdapter.ViewHolder>() {
     private var list: List<Learner> = ArrayList()
 
-    fun setLocationList(list: List<Learner>) {
+    fun setTopLeanersList(list: List<Learner>) {
         this.list = list
         notifyDataSetChanged()
     }

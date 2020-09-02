@@ -18,6 +18,7 @@ class LearningRepository(val application: Application) {
 
     val showProgress = MutableLiveData<Boolean>()
     val locationList = MutableLiveData<List<Learner>>()
+    val topLearnersList = MutableLiveData<List<Learner>>()
 
 
     fun changeState() {
@@ -47,7 +48,7 @@ class LearningRepository(val application: Application) {
                     response: Response<List<Learner>>
             ) {
                 Log.d("SearchRepository" , "Response : ${Gson().toJson(response.body())}")
-                locationList.value = response.body()
+                topLearnersList.value = response.body()
                 showProgress.value = false
             }
 
