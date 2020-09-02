@@ -21,7 +21,7 @@ class SkillIQLeaders : Fragment() {
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         val view : View =  inflater.inflate(R.layout.fragment_skill_i_q_leaders, container, false)
-        val progressBar = view.findViewById<ProgressBar>(R.id.skills_progress_bar)
+        progressBar = view.findViewById<ProgressBar>(R.id.skills_progress_bar)
 
 
         skillViewModel = AndroidViewModelFactory(Application()).create(SkillViewModel::class.java)

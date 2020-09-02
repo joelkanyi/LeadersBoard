@@ -8,6 +8,7 @@ import retrofit2.http.GET
 const val BASE_URL = "https://gadsapi.herokuapp.com/"
 
 interface RestAPI {
+
     @GET("api/hours")
     fun getTopLearner(): Call<List<Learner>>
 

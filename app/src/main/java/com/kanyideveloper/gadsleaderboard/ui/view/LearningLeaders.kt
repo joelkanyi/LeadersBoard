@@ -24,7 +24,7 @@ class LearningLeaders : Fragment() {
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         val view: View =  inflater.inflate(R.layout.fragment_learning_leaders, container, false)
-        val progressBar = view.findViewById<ProgressBar>(R.id.learning_progress_bar)
+        progressBar = view.findViewById<ProgressBar>(R.id.learning_progress_bar)
         viewModel = AndroidViewModelFactory(Application()).create(LearningViewModel::class.java)
 
         viewModel.getTopLearner()

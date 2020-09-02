@@ -15,16 +15,29 @@ class LeaderboardActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_leaderboard)
 
-        val toolbar = findViewById<Toolbar>(R.id.toolbar)
+        /*val toolbar = findViewById<Toolbar>(R.id.toolbar)
         val viewPager: ViewPager = findViewById(R.id.view_pager)
         val tabs: TabLayout = findViewById(R.id.tabs)
 
-        setSupportActionBar(toolbar)
+        //setSupportActionBar(toolbar)
         val adapter = ViewPagerAdapter(supportFragmentManager)
+
+        if()
         adapter.addFragment(LearningLeaders(),"Learning Leaders")
         adapter.addFragment(SkillIQLeaders(),"Skill IQ Leaders")
         viewPager.adapter = adapter
-        tabs.setupWithViewPager(viewPager)
+        tabs.setupWithViewPager(viewPager)*/
+
+
+        val viewPager: ViewPager = findViewById(R.id.view_pager)
+        val tabLayout: TabLayout = findViewById(R.id.tabs)
+
+
+        val viewPagerAdapter = ViewPagerAdapter(supportFragmentManager)
+        viewPager.adapter = viewPagerAdapter
+
+        // It is used to join TabLayout with ViewPager.
+        tabLayout.setupWithViewPager(viewPager)
 
     }
 }

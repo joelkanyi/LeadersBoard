@@ -14,37 +14,44 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class LearningRepository (val application: Application) {
+class LearningRepository(val application: Application) {
 
-    private val TAG = "LearningRepository"
+    val showProgress = MutableLiveData<Boolean>()
+    val locationList = MutableLiveData<List<Learner>>()
 
-    var showProgress = MutableLiveData<Boolean>()
 
-
-    fun changeState(){
+    fun changeState() {
         showProgress.value = !(showProgress.value != null && showProgress.value!!)
     }
 
 
-    fun getTopLearners(){
+    fun getTopLearners() {
         showProgress.value = true
+        // Networkcall
 
-        //Network call
-        val retrofit = Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(GsonConverterFactory.create()).build()
+        val retrofit =
+                Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(GsonConverterFactory.create())
+                        .build()
+
+
         val service = retrofit.create(RestAPI::class.java)
-        service.getTopLearner().enqueue(object : Callback<List<Learner>> {
-            override fun onResponse(call: Call<List<Learner>>, response: Response<List<Learner>>) {
-                showProgress.value = false
-                Log.d(TAG, "onResponse: ${Gson().toJson(response.body())}")
-            }
 
+        service.getTopLearner().enqueue(object  : Callback<List<Learner>>{
             override fun onFailure(call: Call<List<Learner>>, t: Throwable) {
                 showProgress.value = false
-                Toast.makeText(application, "Failed to load data, check your internet connection",
-                        Toast.LENGTH_SHORT).show()
+                Toast.makeText(application,"Error wile accessing the API",Toast.LENGTH_SHORT).show()
             }
+
+            override fun onResponse(
+                    call: Call<List<Learner>>,
+                    response: Response<List<Learner>>
+            ) {
+                Log.d("SearchRepository" , "Response : ${Gson().toJson(response.body())}")
+                locationList.value = response.body()
+                showProgress.value = false
+            }
+
         })
     }
 }
-
 
