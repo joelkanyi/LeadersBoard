@@ -13,10 +13,10 @@ class SkillViewModel(application: Application) : AndroidViewModel(application){
    init {
        this.showProgress = skillRepository.showProgess
    }
-
+/*
     fun getTopSkillers(){
         skillRepository.getTopSkiller()
     }
-
+*/
 
 }

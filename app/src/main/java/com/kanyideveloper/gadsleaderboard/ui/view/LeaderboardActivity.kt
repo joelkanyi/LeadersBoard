@@ -29,7 +29,7 @@ class LeaderboardActivity : AppCompatActivity() {
         tabs.setupWithViewPager(viewPager)*/
 
 
-        val viewPager: ViewPager = findViewById(R.id.view_pager)
+        /*val viewPager: ViewPager = findViewById(R.id.view_pager)
         val tabLayout: TabLayout = findViewById(R.id.tabs)
 
 
@@ -37,7 +37,16 @@ class LeaderboardActivity : AppCompatActivity() {
         viewPager.adapter = viewPagerAdapter
 
         // It is used to join TabLayout with ViewPager.
-        tabLayout.setupWithViewPager(viewPager)
+        tabLayout.setupWithViewPager(viewPager)*/
 
+        val viewPager: ViewPager = findViewById(R.id.viewPager)
+        val tabLayout: TabLayout = findViewById(R.id.tabLayout)
+
+
+        val viewPagerAdapter = ViewPagerAdapter(supportFragmentManager)
+        viewPager.adapter = viewPagerAdapter
+
+        // It is used to join TabLayout with ViewPager.
+        tabLayout.setupWithViewPager(viewPager)
     }
 }

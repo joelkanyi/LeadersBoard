@@ -10,7 +10,7 @@ import com.kanyideveloper.gadsleaderboard.ui.view.SkillIQLeaders
 class ViewPagerAdapter(fm: FragmentManager) : FragmentStatePagerAdapter(fm) {
     override fun getItem(position: Int): Fragment {
         return when(position){
-            1-> {
+            0-> {
                 LearningLeaders()
             }
             else ->{
@@ -25,7 +25,7 @@ class ViewPagerAdapter(fm: FragmentManager) : FragmentStatePagerAdapter(fm) {
 
     override fun getPageTitle(position: Int): CharSequence? {
        return when(position){
-           1 -> "Learning Leaders"
+           0 -> "Learning Leaders"
            else -> return "Skill IQ Leaders"
        }
     }

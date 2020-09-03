@@ -6,3 +6,4 @@ class Learner(
         val country: String,
         val badgeUrl: String
 )
+
