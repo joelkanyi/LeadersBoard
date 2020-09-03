@@ -12,6 +12,8 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProvider.AndroidViewModelFactory
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.kanyideveloper.gadsleaderboard.R
 import com.kanyideveloper.gadsleaderboard.adapters.LearningAdapter
 import com.kanyideveloper.gadsleaderboard.viewmodels.LearningViewModel
@@ -22,12 +24,15 @@ class LearningLeaders : Fragment() {
     private lateinit var viewModel: LearningViewModel
     private lateinit var progressBar: ProgressBar
     private lateinit var adapter : LearningAdapter
+    private lateinit var recycler : RecyclerView
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         val view: View =  inflater.inflate(R.layout.fragment_learning_leaders, container, false)
         progressBar = view.findViewById<ProgressBar>(R.id.learning_progress_bar)
+        recycler = view.findViewById(R.id.learning_leaders_recycler)
+
         viewModel = AndroidViewModelFactory(Application()).create(LearningViewModel::class.java)
 
         viewModel.getTopLearner()
@@ -44,8 +49,10 @@ class LearningLeaders : Fragment() {
         viewModel.topLearnersList.observe(viewLifecycleOwner, Observer {
             adapter.setTopLeanersList(it)
         })
-        adapter = LearningAdapter(Application())
-        learning_leaders_recycler.adapter = adapter
+
+        recycler.layoutManager = LinearLayoutManager(context!!)
+        adapter = LearningAdapter(context!!)
+        recycler.adapter = adapter
 
         return view
     }

@@ -23,10 +23,10 @@ class LearningAdapter( private val context: Context) : RecyclerView.Adapter<Lear
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.name.text = list[position].learner_name
+        holder.name.text = list[position].name
 
-        Picasso.get().load(list[position].learning_image_url).into(holder.image_url)
-        holder.hours_country.text = "${list[position].learner_hours} learning hours, ${list[position].learner_country}"
+        Picasso.get().load(list[position].badgeUrl).into(holder.image_url)
+        holder.hours_country.text = "${list[position].hours} learning hours, ${list[position].country}"
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

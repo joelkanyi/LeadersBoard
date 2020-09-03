@@ -17,8 +17,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 class LearningRepository(val application: Application) {
 
     val showProgress = MutableLiveData<Boolean>()
-    val locationList = MutableLiveData<List<Learner>>()
-    val topLearnersList = MutableLiveData<List<Learner>>()
+    val LearnersList = MutableLiveData<List<Learner>>()
 
 
     fun changeState() {
@@ -48,7 +47,7 @@ class LearningRepository(val application: Application) {
                     response: Response<List<Learner>>
             ) {
                 Log.d("SearchRepository" , "Response : ${Gson().toJson(response.body())}")
-                topLearnersList.value = response.body()
+                LearnersList.value = response.body()
                 showProgress.value = false
             }
 

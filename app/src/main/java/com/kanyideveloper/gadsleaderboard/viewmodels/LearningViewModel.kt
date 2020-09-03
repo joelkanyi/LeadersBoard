@@ -10,13 +10,13 @@ class LearningViewModel(application : Application) : AndroidViewModel(applicatio
 
 
 
-     private val learningRepository = LearningRepository(application)
-     val showProgress : LiveData<Boolean>
-     val topLearnersList : LiveData<List<Learner>>
+    private val learningRepository = LearningRepository(application)
+    val showProgress : LiveData<Boolean>
+    val topLearnersList : LiveData<List<Learner>>
 
     init {
         this.showProgress = learningRepository.showProgress
-        this.topLearnersList = learningRepository.topLearnersList
+        this.topLearnersList = learningRepository.LearnersList
     }
 
     fun changeState(){
