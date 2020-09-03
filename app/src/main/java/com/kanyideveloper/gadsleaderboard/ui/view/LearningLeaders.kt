@@ -30,7 +30,7 @@ class LearningLeaders : Fragment() {
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         val view: View =  inflater.inflate(R.layout.fragment_learning_leaders, container, false)
-        progressBar = view.findViewById<ProgressBar>(R.id.learning_progress_bar)
+       /* progressBar = view.findViewById<ProgressBar>(R.id.learning_progress_bar)
         recycler = view.findViewById(R.id.learning_leaders_recycler)
 
         viewModel = AndroidViewModelFactory(Application()).create(LearningViewModel::class.java)
@@ -52,7 +52,7 @@ class LearningLeaders : Fragment() {
 
         recycler.layoutManager = LinearLayoutManager(context!!)
         adapter = LearningAdapter(context!!)
-        recycler.adapter = adapter
+        recycler.adapter = adapter*/
 
         return view
     }
