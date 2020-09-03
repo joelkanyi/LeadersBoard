@@ -16,6 +16,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 class SkillRepository (val application: Application){
 
     val showProgess = MutableLiveData<Boolean>()
+    val topSkillersList = MutableLiveData<List<Skiller>>()
 
     fun getTopSkiller(){
         showProgess.value = true
@@ -26,6 +27,7 @@ class SkillRepository (val application: Application){
         service.getTopSkiller().enqueue(object : Callback<List<Skiller>>{
             override fun onResponse(call: Call<List<Skiller>>, response: Response<List<Skiller>>) {
                 showProgess.value = false
+                topSkillersList.value = response.body()
 
             }
 

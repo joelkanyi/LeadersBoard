@@ -29,6 +29,7 @@
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/skill_iq_score_country"
             android:layout_below="@+id/skill_iq_leader_name"
             android:layout_marginTop="5dp"
             android:layout_marginLeft="16dp"
