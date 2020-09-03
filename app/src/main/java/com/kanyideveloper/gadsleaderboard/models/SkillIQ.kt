@@ -1,6 +1,6 @@
 package com.kanyideveloper.gadsleaderboard.models
 
-class Skiller(
+class SkillIQ(
         val name: String,
         val score: String,
         val country: Int,

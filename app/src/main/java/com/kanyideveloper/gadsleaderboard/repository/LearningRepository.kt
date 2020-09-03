@@ -36,7 +36,7 @@ class LearningRepository(val application: Application) {
 
         val service = retrofit.create(RestAPI::class.java)
 
-        service.getTopLearner().enqueue(object  : Callback<List<Learner>>{
+        service.getTopLearningLeaders().enqueue(object  : Callback<List<Learner>>{
             override fun onFailure(call: Call<List<Learner>>, t: Throwable) {
                 showProgress.value = false
                 Toast.makeText(application,"Error wile accessing the API",Toast.LENGTH_SHORT).show()
