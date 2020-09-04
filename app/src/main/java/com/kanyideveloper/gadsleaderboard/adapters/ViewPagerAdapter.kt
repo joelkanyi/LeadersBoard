@@ -2,7 +2,6 @@ package com.kanyideveloper.gadsleaderboard.adapters
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentPagerAdapter
 import androidx.fragment.app.FragmentStatePagerAdapter
 import com.kanyideveloper.gadsleaderboard.ui.view.LearningLeaders
 import com.kanyideveloper.gadsleaderboard.ui.view.SkillIQLeaders
@@ -13,7 +12,7 @@ class ViewPagerAdapter(fm: FragmentManager) : FragmentStatePagerAdapter(fm) {
             0-> {
                 LearningLeaders()
             }
-            else ->{
+            else->{
                 return SkillIQLeaders()
             }
         }

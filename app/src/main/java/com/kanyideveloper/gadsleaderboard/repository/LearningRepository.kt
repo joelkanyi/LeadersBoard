@@ -5,7 +5,8 @@ import android.util.Log
 import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
 import com.google.gson.Gson
-import com.kanyideveloper.gadsleaderboard.models.Learner
+import com.kanyideveloper.gadsleaderboard.models.Learners
+import com.kanyideveloper.gadsleaderboard.models.SkillIQ
 import com.kanyideveloper.gadsleaderboard.retrofit.BASE_URL
 import com.kanyideveloper.gadsleaderboard.retrofit.RestAPI
 import retrofit2.Call
@@ -16,8 +17,9 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class LearningRepository(val application: Application) {
 
+    private  val TAG = "LearningRepository"
     val showProgress = MutableLiveData<Boolean>()
-    val LearnersList = MutableLiveData<List<Learner>>()
+    val LearnersList = MutableLiveData<List<Learners>>()
 
 
     fun changeState() {
@@ -36,17 +38,18 @@ class LearningRepository(val application: Application) {
 
         val service = retrofit.create(RestAPI::class.java)
 
-        service.getTopLearningLeaders().enqueue(object  : Callback<List<Learner>>{
-            override fun onFailure(call: Call<List<Learner>>, t: Throwable) {
-                showProgress.value = false
-                Toast.makeText(application,"Error wile accessing the API",Toast.LENGTH_SHORT).show()
+        service.getTopLearningLeaders().enqueue(object : Callback<List<Learners>> {
+            override fun onFailure(call: Call<List<Learners>>, t: Throwable) {
+                showProgress.value = true
+                // Toast.makeText(application,"Error wile accessing the API",Toast.LENGTH_SHORT).show()
+                Log.d(TAG, "onFailure: failure")
             }
 
             override fun onResponse(
-                    call: Call<List<Learner>>,
-                    response: Response<List<Learner>>
+                    call: Call<List<Learners>>,
+                    response: Response<List<Learners>>
             ) {
-                Log.d("SearchRepository" , "Response : ${Gson().toJson(response.body())}")
+                Log.d("LearningRepository", "Response : ${Gson().toJson(response.body())}")
                 LearnersList.value = response.body()
                 showProgress.value = false
             }

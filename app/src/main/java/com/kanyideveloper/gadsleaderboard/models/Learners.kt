@@ -1,6 +1,6 @@
 package com.kanyideveloper.gadsleaderboard.models
 
-class Learner(
+class Learners(
         val name: String,
         val hours: String,
         val country: String,

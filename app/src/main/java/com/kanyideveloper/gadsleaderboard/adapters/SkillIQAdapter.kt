@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.kanyideveloper.gadsleaderboard.R
 import com.kanyideveloper.gadsleaderboard.models.SkillIQ
 import com.squareup.picasso.Picasso
-
 import kotlinx.android.synthetic.main.skill_iq_recyclerview_row.view.*
 
 class SkillIQAdapter( private val context: Context) : RecyclerView.Adapter<SkillIQAdapter.ViewHolder>() {
