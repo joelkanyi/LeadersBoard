@@ -15,8 +15,9 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:minHeight="20px"
             android:text="Submit"
+            android:minHeight="30dp"
+            android:id="@+id/action_bar_submit"
             android:textAllCaps="false"
             android:layout_marginRight="16dp"
             android:layout_gravity="right"
