@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.view.SkillIQLeaders">
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+    tools:context=".ui.view.SkillIQLeaders"
+    android:padding="20dp">
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
@@ -22,6 +18,4 @@
             android:id="@+id/skills_progress_bar"
             android:layout_centerInParent="true"/>
 
-    </RelativeLayout>
-
-</FrameLayout>
+</RelativeLayout>

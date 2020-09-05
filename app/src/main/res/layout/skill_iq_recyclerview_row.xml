@@ -13,6 +13,7 @@
             android:id="@+id/skill_iq_leader_badge"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:contentDescription="@string/skill_iq_leader_badge"
             android:src="@drawable/skill_iq"/>
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -21,9 +22,8 @@
             android:layout_height="wrap_content"
             android:layout_toRightOf="@id/skill_iq_leader_badge"
             android:textStyle="bold"
-            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:text="John Doe"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -31,10 +31,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/skill_iq_score_and_country"
             android:layout_below="@+id/skill_iq_leader_name"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="16dp"
-            android:layout_toRightOf="@+id/skill_iq_leader_badge"
-            android:text="300 Skill IQ Score, Kenya" />
+            android:layout_marginStart="16dp"
+            android:layout_toRightOf="@+id/skill_iq_leader_badge"/>
 
     </RelativeLayout>
 

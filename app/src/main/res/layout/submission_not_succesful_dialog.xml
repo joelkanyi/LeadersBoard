@@ -8,12 +8,13 @@
         android:layout_width="90dp"
         android:layout_height="90dp"
         android:src="@drawable/alert"
+        android:contentDescription="@string/alert_image"
         android:layout_centerHorizontal="true"
         android:id="@+id/alert_image"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Submission not Successful"
+        android:text="@string/submission_not_successful"
         android:layout_below="@id/alert_image"
         android:layout_centerHorizontal="true"
         android:textSize="18sp"

@@ -9,11 +9,12 @@
         android:layout_height="90dp"
         android:src="@drawable/checked"
         android:layout_centerHorizontal="true"
+        android:contentDescription="@string/checked_image"
         android:id="@+id/tick_image"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Submission Successful"
+        android:text="@string/submission_successful"
         android:layout_below="@id/tick_image"
         android:layout_centerHorizontal="true"
         android:textSize="18sp"

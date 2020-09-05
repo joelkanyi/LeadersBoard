@@ -12,6 +12,7 @@
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/top_learner_badge"
             android:layout_width="90dp"
+            android:contentDescription="@string/top_learner_badge"
             android:layout_height="90dp"
             android:src="@drawable/top_learner"/>
 
@@ -22,8 +23,7 @@
             android:layout_toRightOf="@id/top_learner_badge"
             android:textStyle="bold"
             android:layout_marginTop="16dp"
-            android:layout_marginLeft="16dp"
-            android:text="John Doe"
+            android:layout_marginStart="16dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -32,9 +32,8 @@
             android:layout_below="@+id/top_learner_name"
             android:layout_marginTop="5dp"
             android:id="@+id/top_learner_hours_country"
-            android:layout_marginLeft="16dp"
-            android:layout_toRightOf="@+id/top_learner_badge"
-            android:text="223 learning hours, Kenya" />
+            android:layout_marginEnd="16dp"
+            android:layout_toRightOf="@+id/top_learner_badge"/>
 
     </RelativeLayout>
 

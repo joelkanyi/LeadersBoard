@@ -9,12 +9,13 @@
     android:layout_height="30dp"
     android:id="@+id/close_btn"
     android:src="@drawable/close"
+    android:contentDescription="@string/close_button"
     android:layout_alignParentEnd="true"/>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Are you sure"
+        android:text="@string/are_you_sure"
         android:textColor="@color/black"
         android:textStyle="bold"
         android:id="@+id/are_you_sure"
@@ -27,15 +28,16 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_below="@id/close_btn"
-        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
         android:layout_marginTop="42dp"
+        android:contentDescription="@string/question_mark"
         android:layout_toRightOf="@id/are_you_sure"
         android:src="@drawable/question" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Yes"
+        android:text="@string/yes"
         android:textAllCaps="false"
         android:paddingStart="45dp"
         android:background="@drawable/yes_background"
