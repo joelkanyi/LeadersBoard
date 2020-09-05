@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp">
+
+<ImageView
+    android:layout_width="30dp"
+    android:layout_height="30dp"
+    android:id="@+id/close_btn"
+    android:src="@drawable/close"
+    android:layout_alignParentEnd="true"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Are you sure"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:id="@+id/are_you_sure"
+        android:layout_below="@id/close_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp"
+        android:textSize="22sp"/>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/close_btn"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="42dp"
+        android:layout_toRightOf="@id/are_you_sure"
+        android:src="@drawable/question" />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yes"
+        android:textAllCaps="false"
+        android:paddingStart="45dp"
+        android:background="@drawable/yes_background"
+        android:paddingEnd="45dp"
+        android:textColor="#ffcc33"
+        android:layout_below="@id/are_you_sure"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp"
+        android:layout_marginBottom="42dp"/>
+
+</RelativeLayout>
