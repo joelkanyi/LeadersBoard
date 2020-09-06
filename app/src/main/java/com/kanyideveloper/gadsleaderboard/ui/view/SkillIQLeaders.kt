@@ -13,12 +13,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.kanyideveloper.gadsleaderboard.R
 import com.kanyideveloper.gadsleaderboard.adapters.SkillIQAdapter
-import com.kanyideveloper.gadsleaderboard.viewmodels.SkillViewModel
+import com.kanyideveloper.gadsleaderboard.viewmodels.ViewModel
 
 
 class SkillIQLeaders : Fragment() {
 
-    private lateinit var skillViewModel : SkillViewModel
+    private lateinit var viewModel: ViewModel
     private lateinit var progressBar: ProgressBar
     private lateinit var adapter : SkillIQAdapter
     private lateinit var recyclerView : RecyclerView
@@ -29,11 +29,11 @@ class SkillIQLeaders : Fragment() {
         progressBar = view.findViewById(R.id.skills_progress_bar)
         recyclerView = view.findViewById(R.id.skill_iq_leaders_recycler)
 
-        skillViewModel = AndroidViewModelFactory(Application()).create(SkillViewModel::class.java)
+        viewModel = AndroidViewModelFactory(Application()).create(ViewModel::class.java)
 
-        skillViewModel.getTopSkillIQLeaders()
+        viewModel.getTopSkillIQLeaders()
 
-        skillViewModel.showProgress.observe(viewLifecycleOwner, Observer {
+        viewModel.showProgress.observe(viewLifecycleOwner, Observer {
             if(it){
                 progressBar.visibility = View.VISIBLE
             }
@@ -42,7 +42,16 @@ class SkillIQLeaders : Fragment() {
             }
         })
 
-        skillViewModel.topSkillIQLeadersList.observe(viewLifecycleOwner, Observer {
+        viewModel.showSkillProgress.observe(viewLifecycleOwner, Observer {
+            if(it){
+                progressBar.visibility = View.VISIBLE
+            }
+            else{
+                progressBar.visibility = View.GONE
+            }
+        })
+
+        viewModel.topSkillIQLeadersList.observe(viewLifecycleOwner, Observer {
             adapter.setTopSkillIQLeadersList(it)
         })
 

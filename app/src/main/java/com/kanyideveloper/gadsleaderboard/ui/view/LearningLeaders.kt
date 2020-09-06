@@ -10,18 +10,16 @@ import android.view.ViewGroup
 import android.widget.ProgressBar
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProvider.AndroidViewModelFactory
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.kanyideveloper.gadsleaderboard.R
 import com.kanyideveloper.gadsleaderboard.adapters.LearningAdapter
-import com.kanyideveloper.gadsleaderboard.viewmodels.LearningViewModel
-import kotlinx.android.synthetic.main.fragment_learning_leaders.*
+import com.kanyideveloper.gadsleaderboard.viewmodels.ViewModel
 
 
 class LearningLeaders : Fragment() {
-    private lateinit var viewModel: LearningViewModel
+    private lateinit var viewModel: ViewModel
     private lateinit var progressBar: ProgressBar
     private lateinit var adapter : LearningAdapter
     private lateinit var recycler : RecyclerView
@@ -33,7 +31,7 @@ class LearningLeaders : Fragment() {
         progressBar = view.findViewById<ProgressBar>(R.id.learning_progress_bar)
         recycler = view.findViewById(R.id.learning_leaders_recycler)
 
-        viewModel = AndroidViewModelFactory(Application()).create(LearningViewModel::class.java)
+        viewModel = AndroidViewModelFactory(Application()).create(ViewModel::class.java)
 
         viewModel.getTopLearner()
 
