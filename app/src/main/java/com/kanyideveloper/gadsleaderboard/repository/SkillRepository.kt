@@ -5,10 +5,7 @@ import android.util.Log
 import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
 import com.google.gson.Gson
-import com.kanyideveloper.gadsleaderboard.models.Learners
 import com.kanyideveloper.gadsleaderboard.models.SkillIQ
-import com.kanyideveloper.gadsleaderboard.retrofit.Api
-import com.kanyideveloper.gadsleaderboard.retrofit.BASE_UR
 import com.kanyideveloper.gadsleaderboard.retrofit.BASE_URL
 import com.kanyideveloper.gadsleaderboard.retrofit.RestAPI
 import retrofit2.Call
@@ -35,13 +32,13 @@ class SkillRepository(val application: Application) {
         // Networkccall
 
         val retrofit =
-                Retrofit.Builder().baseUrl(BASE_UR).addConverterFactory(GsonConverterFactory.create())
+                Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(GsonConverterFactory.create())
                         .build()
 
 
-        val service = retrofit.create(Api::class.java)
+        val service = retrofit.create(RestAPI::class.java)
 
-        service.getTopSkillIQLeaders().enqueue(object : Callback<List<SkillIQ>> {
+        service.getTopSkill().enqueue(object : Callback<List<SkillIQ>> {
             override fun onFailure(call: Call<List<SkillIQ>>, t: Throwable) {
                 showProgress.value = false
                 ///Toast.makeText(application,"Error wile accessing the API",Toast.LENGTH_SHORT).show()

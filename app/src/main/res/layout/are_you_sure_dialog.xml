@@ -5,8 +5,8 @@
     android:padding="20dp">
 
 <ImageView
-    android:layout_width="30dp"
-    android:layout_height="30dp"
+    android:layout_width="35dp"
+    android:layout_height="35dp"
     android:id="@+id/close_btn"
     android:src="@drawable/close"
     android:contentDescription="@string/close_button"
@@ -42,6 +42,7 @@
         android:paddingStart="45dp"
         android:background="@drawable/yes_background"
         android:paddingEnd="45dp"
+        android:id="@+id/yes_to_submit"
         android:textColor="#ffcc33"
         android:layout_below="@id/are_you_sure"
         android:layout_centerHorizontal="true"
