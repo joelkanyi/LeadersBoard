@@ -18,18 +18,18 @@
 
 
         <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/toolbar"
+            android:id="@+id/sub_toolbar"
             style="@style/Widget.MaterialComponents.Toolbar.Primary"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             app:titleTextColor="@color/white">
 
             <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/gads_banner"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/too"
+                android:layout_width="250dp"
+                android:layout_height="100dp"
                 android:scaleType="centerInside"
-                android:src="@drawable/gads_banner" />
+                android:src="@drawable/toolbar_banner" />
 
 
         </com.google.android.material.appbar.MaterialToolbar>
@@ -86,7 +86,7 @@
         android:id="@+id/email_address"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="52dp"
         android:background="@drawable/proj_submit_box"
         android:hint="@string/email_address"
         android:inputType="textEmailAddress"
@@ -101,7 +101,7 @@
         android:id="@+id/project_github_link"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="52dp"
         android:background="@drawable/proj_submit_box"
         android:hint="@string/project_on_github_link"
         android:inputType="textEmailAddress"

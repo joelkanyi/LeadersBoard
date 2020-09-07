@@ -9,6 +9,7 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.widget.Toolbar
 import com.kanyideveloper.gadsleaderboard.R
 import com.kanyideveloper.gadsleaderboard.retrofit.POST_BASE_URL
 import com.kanyideveloper.gadsleaderboard.retrofit.RestAPI
@@ -25,6 +26,12 @@ class ProjectSubmission : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_project_submission)
+
+        //setting up my toolbar
+        val myToolbar = findViewById<Toolbar>(R.id.sub_toolbar)
+        setSupportActionBar(myToolbar)
+        myToolbar.title = ""
+        if (supportActionBar != null) supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
         btn_submit_project.setOnClickListener {
             showConfirmationDialog()
@@ -87,5 +94,11 @@ class ProjectSubmission : AppCompatActivity() {
         builder.setView(dialogView)
         val alertDialog = builder.create()
         alertDialog.show()
+    }
+
+    //setting navigate up button
+    override fun onSupportNavigateUp(): Boolean {
+        finish()
+        return true
     }
 }

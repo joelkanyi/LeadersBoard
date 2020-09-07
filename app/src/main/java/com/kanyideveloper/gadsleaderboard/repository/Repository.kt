@@ -15,7 +15,7 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class Repository(val application: Application) {
+class Repository() {
 
     private  val TAG = "Repository"
     val showProgress = MutableLiveData<Boolean>()
