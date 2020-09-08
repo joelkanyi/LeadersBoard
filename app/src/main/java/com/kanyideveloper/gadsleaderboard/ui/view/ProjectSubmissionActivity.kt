@@ -46,12 +46,12 @@ class ProjectSubmissionActivity : AppCompatActivity() {
 
             override fun onResponse(call: retrofit2.Call<Void>, response: Response<Void>) {
                 showSuccessDialog()
-                Toast.makeText(applicationContext,"Data posted",Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext,"Data Posted",Toast.LENGTH_SHORT).show()
             }
 
             override fun onFailure(call: retrofit2.Call<Void>, t: Throwable) {
                 showFailureDialog()
-                Toast.makeText(applicationContext,"Data not posted",Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext,"Data not Posted",Toast.LENGTH_SHORT).show()
             }
 
         })

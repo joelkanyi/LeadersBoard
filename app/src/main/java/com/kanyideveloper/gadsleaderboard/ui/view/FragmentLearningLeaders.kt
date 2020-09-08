@@ -39,7 +39,7 @@ class FragmentLearningLeaders() : Fragment() {
 
    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        progressBar = view.findViewById<ProgressBar>(R.id.learning_progress_bar)
+        progressBar = view.findViewById(R.id.learning_progress_bar)
         recycler = view.findViewById(R.id.learning_leaders_recycler)
 
         viewModel.getTopLearner()

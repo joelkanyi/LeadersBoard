@@ -13,7 +13,7 @@ class MainViewModel() : ViewModel(){
     val showSkillProgress : LiveData<Boolean>
     val topLearnersList : LiveData<List<Learners>>
     val topSkillIQLeadersList : LiveData<List<SkillIQ>>
-    val repository = Repository()
+    private val repository = Repository()
 
     init {
         this.showProgress = repository.showProgress

@@ -29,19 +29,16 @@ class Repository() {
 
     fun getTopLearners() {
         showProgress.value = true
-        // Network call
+
         service.getTopLearningLeaders().enqueue(object : Callback<List<Learners>> {
             override fun onFailure(call: Call<List<Learners>>, t: Throwable) {
                 showProgress.value = false
-                // Toast.makeText(application,"Error wile accessing the API",Toast.LENGTH_SHORT).show()
-                Log.d(TAG, "onFailure: failure")
             }
 
             override fun onResponse(
                     call: Call<List<Learners>>,
                     response: Response<List<Learners>>
             ) {
-                Log.d("Repository", "Response : ${Gson().toJson(response.body())}")
                 learnersList.value = response.body()
                 showProgress.value = false
             }
@@ -51,23 +48,19 @@ class Repository() {
 
     fun getTopSkill() {
         showSkillsProgress.value = true
-        // Network call
+
         service.getTopSkill().enqueue(object : Callback<List<SkillIQ>> {
             override fun onFailure(call: Call<List<SkillIQ>>, t: Throwable) {
                 showSkillsProgress.value = false
-                ///Toast.makeText(application,"Error wile accessing the API",Toast.LENGTH_SHORT).show()
-                Log.d(TAG, "onFailure: failure")
             }
 
             override fun onResponse(
                     call: Call<List<SkillIQ>>,
                     response: Response<List<SkillIQ>>
             ) {
-                Log.d("SkillRepository", "Response : ${Gson().toJson(response.body())}")
                 skillIQList.value = response.body()
                 showSkillsProgress.value = false
             }
-
         })
     }
 }
