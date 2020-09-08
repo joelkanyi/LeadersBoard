@@ -27,7 +27,7 @@ class SkillIQLeaders : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewModel = ViewModelProvider.AndroidViewModelFactory(Application()).create(MainViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -43,7 +43,7 @@ class SkillIQLeaders : Fragment() {
 
         viewModel.getTopSkillIQLeaders()
 
-        viewModel.showProgress.observe(viewLifecycleOwner, Observer {
+        viewModel.showSkillProgress.observe(viewLifecycleOwner, Observer {
             if(it){
                 progressBar.visibility = View.VISIBLE
             }

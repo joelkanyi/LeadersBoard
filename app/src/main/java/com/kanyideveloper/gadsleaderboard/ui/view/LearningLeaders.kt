@@ -1,7 +1,6 @@
 package com.kanyideveloper.gadsleaderboard.ui.view
 
 
-import android.app.Application
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -29,7 +28,7 @@ class LearningLeaders() : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewModel = ViewModelProvider.AndroidViewModelFactory(Application()).create(MainViewModel::class.java)
+       viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -38,7 +37,7 @@ class LearningLeaders() : Fragment() {
         return inflater.inflate(R.layout.fragment_learning_leaders, container, false)
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         progressBar = view.findViewById<ProgressBar>(R.id.learning_progress_bar)
         recycler = view.findViewById(R.id.learning_leaders_recycler)

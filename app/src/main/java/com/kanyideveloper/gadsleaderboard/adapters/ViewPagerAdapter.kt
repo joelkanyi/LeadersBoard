@@ -23,9 +23,9 @@ class ViewPagerAdapter(fm: FragmentManager) : FragmentStatePagerAdapter(fm) {
     }
 
     override fun getPageTitle(position: Int): CharSequence? {
-       return when(position){
-           0 -> "Learning Leaders"
-           else -> return "Skill IQ Leaders"
-       }
+        return when(position){
+            0 -> "Learning Leaders"
+            else -> return "Skill IQ Leaders"
+        }
     }
 }

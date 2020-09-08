@@ -8,12 +8,12 @@ import com.kanyideveloper.gadsleaderboard.models.Learners
 import com.kanyideveloper.gadsleaderboard.models.SkillIQ
 import com.kanyideveloper.gadsleaderboard.repository.Repository
 
-abstract class MainViewModel() : ViewModel(){
+class MainViewModel() : ViewModel(){
     val showProgress : LiveData<Boolean>
     val showSkillProgress : LiveData<Boolean>
     val topLearnersList : LiveData<List<Learners>>
     val topSkillIQLeadersList : LiveData<List<SkillIQ>>
-    abstract val repository: Repository
+    val repository = Repository()
 
     init {
         this.showProgress = repository.showProgress
