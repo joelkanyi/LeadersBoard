@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".ui.view.ProjectSubmission">
+    tools:context=".ui.view.ProjectSubmissionActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout2"
@@ -26,8 +26,9 @@
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/too"
-                android:layout_width="250dp"
-                android:layout_height="100dp"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginRight="32dp"
                 android:scaleType="centerInside"
                 android:src="@drawable/toolbar_banner" />
 
@@ -46,7 +47,7 @@
                 android:text="@string/project_submission"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display3"
                 android:textColor="@color/main"
-                android:textSize="18sp" />
+                android:textSize="22sp" />
         </RelativeLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -71,7 +72,7 @@
         android:id="@+id/last_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:background="@drawable/proj_submit_box"
         android:hint="@string/last_name"
         android:inputType="textPersonName"

@@ -3,17 +3,17 @@ package com.kanyideveloper.gadsleaderboard.adapters
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
-import com.kanyideveloper.gadsleaderboard.ui.view.LearningLeaders
-import com.kanyideveloper.gadsleaderboard.ui.view.SkillIQLeaders
+import com.kanyideveloper.gadsleaderboard.ui.view.FragmentLearningLeaders
+import com.kanyideveloper.gadsleaderboard.ui.view.FragmentSkillIQLeaders
 
 class ViewPagerAdapter(fm: FragmentManager) : FragmentStatePagerAdapter(fm) {
     override fun getItem(position: Int): Fragment {
         return when(position){
             0-> {
-                LearningLeaders()
+                FragmentLearningLeaders()
             }
             else->{
-                return SkillIQLeaders()
+                return FragmentSkillIQLeaders()
             }
         }
     }

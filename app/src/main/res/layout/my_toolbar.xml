@@ -8,19 +8,27 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        app:title="@string/toolbar_title"
         app:titleTextColor="@color/white"
         style="@style/Widget.MaterialComponents.Toolbar.Primary">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/toolbar_title"
+            android:layout_marginLeft="42dp"
+            android:textColor="@color/white"
+            android:textSize="18sp"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/submit"
-            android:minHeight="30dp"
+            android:minHeight="20dp"
             android:id="@+id/action_bar_submit"
             android:textAllCaps="false"
-            android:layout_marginEnd="16dp"
             android:layout_gravity="end"
+            android:layout_marginRight="16dp"
             android:textColor="@color/black"
             android:background="@drawable/submit_box"/>
     </com.google.android.material.appbar.MaterialToolbar>

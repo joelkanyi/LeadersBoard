@@ -29,7 +29,7 @@ class LeaderboardActivity : AppCompatActivity() {
         tabLayout.setupWithViewPager(viewPager)
 
         submit_btn.setOnClickListener {
-            //startActivity(Intent(applicationContext, ProjectSubmission::class.java))
+            startActivity(Intent(applicationContext, ProjectSubmissionActivity::class.java))
         }
     }
 

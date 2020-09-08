@@ -2,6 +2,7 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@drawable/dialogs_background"
     android:padding="20dp">
 
 <ImageView
@@ -10,7 +11,7 @@
     android:id="@+id/close_btn"
     android:src="@drawable/close"
     android:contentDescription="@string/close_button"
-    android:layout_alignParentEnd="true"/>
+    android:layout_alignParentRight="true"/>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="wrap_content"
@@ -28,8 +29,8 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_below="@id/close_btn"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="42dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="38dp"
         android:contentDescription="@string/question_mark"
         android:layout_toRightOf="@id/are_you_sure"
         android:src="@drawable/question" />
@@ -42,6 +43,7 @@
         android:paddingStart="45dp"
         android:background="@drawable/yes_background"
         android:paddingEnd="45dp"
+        android:textStyle="bold"
         android:id="@+id/yes_to_submit"
         android:textColor="#ffcc33"
         android:layout_below="@id/are_you_sure"
