@@ -14,7 +14,7 @@ The mobile App will display Top 20 learners in the Learning Leaders’ category 
 
 ## API Endpoints
 
-- Base URL - https://gadsapi.herokuapp.com
+- Base URL - https://gadsapi.herokuapp.com/
 - Learning Leaders - /api/hours
 - Skill IQ Leaders - /api/skilliq
 
