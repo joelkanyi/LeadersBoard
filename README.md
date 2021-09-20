@@ -1,5 +1,5 @@
 # GADs LeadersBoard
-## Associate Android Developer Practice Project
+## Associate Android Developer Practice Project (GADS 2020)
 
 Timeline: Friday, Aug 28 - Friday, Sept 11 2020 (2 weeks)
 
